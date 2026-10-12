@@ -1,0 +1,17 @@
+[project]
+name = "rope_routing"
+version = "0.1.0"
+description = "Pure-RL rope routing with a Franka FR3 in SuperDex, using an object-agnostic surface-based deformation representation"
+requires-python = ">=3.12,<3.13"
+dependencies = ["numpy", "scipy", "gymnasium", "torch"]
+
+[project.optional-dependencies]
+video = ["matplotlib", "imageio", "imageio-ffmpeg", "opencv-python", "pillow"]
+test = ["pytest"]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["rope_routing*"]
